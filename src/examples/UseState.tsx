@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { CodeBlock } from "./Components/CodeBlock";
+import { CodeBlock } from "../Components/CodeBlock";
 
 export const UseStateCode = () => (
   <CodeBlock fileName="UseState.tsx before styling">{`export const UseState = () => {

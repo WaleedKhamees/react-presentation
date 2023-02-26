@@ -43,14 +43,9 @@
   .input {
     @apply w-full py-2 px-4 rounded-lg p text-Body border border-Body placeholder:text-Small outline-none;
   }
-  pre {
-    @apply leading-[21px];
-  }
-  pre > code {
-    @apply leading-[21px] block border-0 m-4 overflow-scroll scroll-p-4;
-  }
+
   code {
-    @apply rounded-md py-[1px] px-[2px] leading-[21px];
+    @apply rounded-md py-[1px] px-[2px] leading-[21px] h-full overflow-y-scroll;
   }
   .ul {
     @apply space-y-1 text-body list-disc list-inside;

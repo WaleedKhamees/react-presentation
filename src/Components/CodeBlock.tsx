@@ -8,9 +8,9 @@ export const CodeBlock = ({
   fileName: string;
 }) => {
   return (
-    <div className="w-1/2 border rounded-md">
-      <pre className="text-white border-b">
-        <code>{children}</code>
+    <div className="flex flex-col items-center w-1/2 max-h-[66.66%]">
+      <pre className="text-white border-b w-full h-full overflow-scroll">
+        <code className="m-4 inline-block">{children}</code>
       </pre>
       <p className="font-mono w-full text-center py-2 text-body">{fileName}</p>
     </div>
