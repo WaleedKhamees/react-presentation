@@ -14,7 +14,7 @@
     font-weight: inherit;
   }
   .display {
-    @apply h-fit text-5xl leading-[2.125rem] font-bold tracking-[-0.005em] mb-[0.5em] text-white;
+    @apply h-fit text-5xl font-bold tracking-[-0.005em] text-white;
   }
   .h1 {
     @apply h-fit text-[1.8rem] leading-[2.125rem] font-bold tracking-[-0.005em] mb-[0.5em] text-white;
