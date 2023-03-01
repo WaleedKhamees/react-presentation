@@ -45,7 +45,7 @@
   }
 
   code {
-    @apply rounded-md py-[1px] px-[2px] leading-[21px] h-full overflow-y-scroll;
+    @apply rounded-md py-[1px] px-[2px] leading-[21px] h-full;
   }
   .ul {
     @apply space-y-1 text-body list-disc list-inside;
@@ -58,4 +58,16 @@
   .slide > div {
     @apply self-center;
   }
+}
+img,
+video {
+  max-width: none;
+}
+body {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
+}
+body::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
 }

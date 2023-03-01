@@ -6,14 +6,34 @@ import { TextSection } from "./Components/TextSection";
 import { useEffect } from "react";
 import { TransitionsSlide } from "./Components/TransitionsSlides";
 import { CodeBlock } from "./Components/CodeBlock";
+import { slide } from "./util/slide";
+import { AiOutlineArrowDown, AiOutlineArrowUp } from "react-icons/ai";
 
 const App = () => {
   return (
-    <div className="w-screen bg-black ">
+    <div className="bg-black relative">
+      <nav className="fixed left-full -translate-x-full">
+        <div className="flex flex-col justify-between items-center h-screen p-4">
+          <button
+            onClick={() => slide("up")}
+            className="focus:outline-none p-4 bg-white bg-opacity-10 rounded-[50%] aspect-square w-fit"
+          >
+            <AiOutlineArrowUp className="text-white" />
+          </button>
+
+          <button
+            onClick={() => slide("down")}
+            className="p-4 bg-white bg-opacity-10 rounded-[50%] aspect-square w-fit"
+          >
+            <AiOutlineArrowDown className="text-white" />
+          </button>
+        </div>
+      </nav>
       <div className="max-w-[1200px] m-auto">
         <TransitionsSlide
-          background="data:image/jpeg;base64,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"
+          background="https://i.imgur.com/W9W6bbW.jpg"
           title="State / Props"
+          subtitle="Walid Khamees & Mohamed Maher"
         />
 
         <Slide>
@@ -59,7 +79,7 @@ const App = () => {
           </TextSection>
           <CodeBlock fileName="props Example">
             {`const CustomButton = ({name} : {name: string}) => {
-  return <button>{name}</button>;
+              return <button>{name}</button>;
 }
 const ParentComponent = () => {
   return (
