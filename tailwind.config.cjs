@@ -8,7 +8,10 @@ module.exports = {
       },
       colors: {
         body: "#959595",
-        header: "#ffffff",
+        reactLightBlue: "#82d7f7",
+        reactDark1: "#292c33",
+        reactDark2: "#212329",
+        reactDark3: "#17181d",
       },
       animation: {
         "spin-slow": "spin 3s linear infinite",

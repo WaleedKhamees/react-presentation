@@ -45,7 +45,7 @@
   }
 
   code {
-    @apply rounded-md py-[1px] px-[2px] leading-[21px] h-full;
+    @apply py-[1px] px-[2px] leading-[21px] h-full;
   }
   .ul {
     @apply space-y-1 text-body list-disc list-inside;
@@ -70,4 +70,54 @@ body {
 }
 body::-webkit-scrollbar {
   display: none; /* for Chrome, Safari, and Opera */
+}
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #999;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+
+#walid {
+  stroke-dasharray: 575;
+  stroke-dashoffset: 575;
+  animation: sign 4s ease-out infinite;
+}
+#maher {
+  stroke-dasharray: 595;
+  stroke-dashoffset: 595;
+  animation: sign 4s ease-out infinite;
+}
+
+@keyframes sign {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.react-gradient {
+  background: linear-gradient(
+    225deg,
+    hsla(230, 12%, 10%, 1) 0%,
+    hsla(196, 88%, 74%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    225deg,
+    hsla(230, 12%, 10%, 1) 0%,
+    hsla(196, 88%, 74%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    225deg,
+    hsla(230, 12%, 10%, 1) 0%,
+    hsla(196, 88%, 74%, 1) 100%
+  );
 }

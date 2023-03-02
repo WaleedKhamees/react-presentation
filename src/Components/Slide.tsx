@@ -3,18 +3,10 @@ import { slide } from "../util/slide";
 interface SlideProps {
   children?: ReactNode;
   reversed?: boolean;
-  isBeginning?: boolean;
-  isFinal?: boolean;
   vertical?: boolean;
 }
 
-export const Slide = ({
-  children,
-  reversed,
-  isBeginning,
-  isFinal,
-  vertical,
-}: SlideProps) => {
+export const Slide = ({ children, reversed, vertical }: SlideProps) => {
   useEffect(() => {
     window.addEventListener("keydown", (e) => {
       if (
@@ -43,7 +35,9 @@ export const Slide = ({
       className={`flex w-full
       h-screen overflow-clip
       slide items-center justify-center p-4 gap-4 
-      ${vertical ? "flex-col" : ""}`}
+      ${vertical ? "flex-col" : "md:flex-row flex-col"}
+      max-w-[1200px] m-auto
+      `}
     >
       {children}
     </section>
