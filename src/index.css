@@ -37,9 +37,6 @@
   .a {
     @apply h-fit text-base leading-[24px] font-normal tracking-[0em] mb-[0.5em];
   }
-  .btn {
-    @apply rounded-lg w-full text-white mb-[0.5em];
-  }
   .input {
     @apply w-full py-2 px-4 rounded-lg p text-Body border border-Body placeholder:text-Small outline-none;
   }

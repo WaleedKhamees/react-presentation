@@ -1,13 +1,27 @@
-import { ReactNode, useEffect, useRef } from "react";
+import {
+  KeyboardEvent,
+  ReactNode,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+} from "react";
 import { slide } from "../util/slide";
 interface SlideProps {
   children?: ReactNode;
   reversed?: boolean;
   vertical?: boolean;
 }
+/* 
 
+     */
 export const Slide = ({ children, reversed, vertical }: SlideProps) => {
   useEffect(() => {
+    const eventHandler = (e) => {
+      if (!e.shiftKey && (e.key === "ArrowDown" || e.key === "s"))
+        slide("down");
+      else if (!e.shiftKey && (e.key === "ArrowUp" || e.key === "w"))
+        slide("up");
+    };
     if (document.body.clientWidth > 800) {
       window.addEventListener("keydown", (e) => {
         if (
@@ -24,17 +38,14 @@ export const Slide = ({ children, reversed, vertical }: SlideProps) => {
           e.preventDefault();
         }
       });
-      return window.addEventListener("keydown", (e) => {
-        if (!e.shiftKey && (e.key === "ArrowDown" || e.key === "s"))
-          slide("down");
-        else if (!e.shiftKey && (e.key === "ArrowUp" || e.key === "w"))
-          slide("up");
-      });
+      return window.addEventListener("keydown", eventHandler);
+    } else {
+      window.removeEventListener("keydown", eventHandler);
     }
   }, []);
   return (
     <section
-      className={`md:w-full md:h-screen gap-8 md:gap-0
+      className={`md:w-full md:h-screen gap-8 md:gap-4
       flex slide items-center justify-center p-4 w-full overflow-clip
       ${vertical ? "md:flex-col" : ""}
       ${reversed ? "md:flex-row-reverse" : "md:flex-row"}

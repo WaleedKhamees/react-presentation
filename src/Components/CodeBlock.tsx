@@ -11,7 +11,7 @@ export const CodeBlock = ({
   fileName?: string;
 }) => {
   return (
-    <div className="flex flex-col items-center border border-white rounded-lg md:max-w-[50%] w-full max-h-[70%] overflow-clip">
+    <div className="flex flex-col items-center border border-white rounded-lg md:max-w-[50%] w-full max-h-[80%] overflow-clip">
       <div className="border-b w-full overflow-scroll ">
         <SyntaxHighlighter
           language={"ts"}
