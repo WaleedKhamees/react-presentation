@@ -1,4 +1,4 @@
-import { Light as SyntaxHighlighter } from "react-syntax-highlighter";
+import { LightAsync as SyntaxHighlighter } from "react-syntax-highlighter";
 import dark from "react-syntax-highlighter/dist/esm/styles/hljs/atom-one-dark";
 
 export const CodeBlock = ({
