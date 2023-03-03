@@ -1,5 +1,7 @@
-import { LightAsync as SyntaxHighlighter } from "react-syntax-highlighter";
-import dark from "react-syntax-highlighter/dist/esm/styles/hljs/atom-one-dark";
+import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
+import ts from "react-syntax-highlighter/dist/esm/languages/prism/typescript";
+import { tomorrow as dark } from "react-syntax-highlighter/dist/esm/styles/prism";
+SyntaxHighlighter.registerLanguage("ts", ts);
 
 export const CodeBlock = ({
   children,
@@ -9,14 +11,15 @@ export const CodeBlock = ({
   fileName?: string;
 }) => {
   return (
-    <div className="flex flex-col items-center border border-white rounded-lg md:max-w-[50%] w-full max-h-[50%] overflow-clip">
-      <div className="border-b w-full overflow-scroll">
+    <div className="flex flex-col items-center border border-white rounded-lg md:max-w-[50%] w-full max-h-[70%] overflow-clip">
+      <div className="border-b w-full overflow-scroll ">
         <SyntaxHighlighter
-          language="typescript"
+          language={"ts"}
           style={dark}
           customStyle={{
             background: "transparent",
-            overflow: "scroll",
+            margin: "0rem 0.5rem",
+            padding: "0.5rem 0rem",
           }}
         >
           {children}

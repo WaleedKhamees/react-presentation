@@ -6,15 +6,16 @@ interface TransitionsSlideTypes extends HTMLAttributes<HTMLDivElement> {
   children?: ReactNode;
 }
 export const TransitionsSlide = ({
-  background,
   title,
   children,
+  className,
+  background,
 }: TransitionsSlideTypes) => {
   return (
     <div
-      className={`flex flex-col w-screen h-screen items-center justify-center react-gradient`}
+      className={`flex flex-col w-screen h-screen items-center justify-center relative ${className}`}
     >
-      <h1 className="display text-white mb-[0.25em]">{title}</h1>
+      <h1 className="display text-white mb-[0.25em] z-20">{title}</h1>
       {children}
     </div>
   );

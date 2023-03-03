@@ -7,11 +7,12 @@ import { TransitionsSlide } from "./Components/TransitionsSlides";
 import { CodeBlock } from "./Components/CodeBlock";
 import { slide } from "./util/slide";
 import { AiOutlineArrowDown, AiOutlineArrowUp } from "react-icons/ai";
+import bg from "./assets/waves.jpg";
 
 const App = () => {
   return (
     <div className="bg-reactDark3 relative">
-      <nav className="fixed left-full -translate-x-full z-20">
+      <nav className="fixed left-full -translate-x-full z-20 hidden lg:block">
         <div className="flex flex-col justify-between items-center h-screen p-4">
           <button
             onClick={() => slide("up")}
@@ -28,10 +29,7 @@ const App = () => {
           </button>
         </div>
       </nav>
-      <TransitionsSlide
-        background="https://i.imgur.com/W9W6bbW.jpg"
-        title="State / Props"
-      >
+      <TransitionsSlide title="State / Props" background={bg}>
         <div className="flex items-center gap-4">
           <svg
             width="140"
@@ -65,7 +63,6 @@ const App = () => {
           </svg>
         </div>
       </TransitionsSlide>
-
       <Slide>
         <TextSection>
           <h2 className="h2 text-white">Intro</h2>
@@ -92,7 +89,7 @@ const App = () => {
             </li>
           </ul>
         </TextSection>
-        <img src={MonkeyAction} className="max-w-full hidden md:block" />
+        <img src={MonkeyAction} className="max-w-full" />
       </Slide>
 
       <Slide reversed={true}>
