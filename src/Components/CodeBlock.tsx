@@ -14,7 +14,10 @@ export const CodeBlock = ({
         <SyntaxHighlighter
           language="typescript"
           style={dark}
-          customStyle={{ background: "transparent" }}
+          customStyle={{
+            background: "transparent",
+            overflow: "scroll",
+          }}
         >
           {children}
         </SyntaxHighlighter>
