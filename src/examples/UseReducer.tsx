@@ -1,4 +1,5 @@
 import { useReducer } from "react";
+import { Btn } from "../Components/Btn";
 import { CodeBlock } from "../Components/CodeBlock";
 
 export const UseReducerCode = () => (
@@ -56,20 +57,11 @@ export const UseReducer = () => {
   const [state, dispatch] = useReducer(reducer, InitialState);
   return (
     <div className="flex flex-col items-center justify-center">
+      <h2 className="h2">UseReducer Example</h2>
       <h2 className="h2">{state.number}</h2>
       <div className="flex gap-4">
-        <button
-          className="btn text-lg bg-white bg-opacity-10 px-8 py-2"
-          onClick={() => dispatch({ type: "Increment" })}
-        >
-          {" + "}
-        </button>
-        <button
-          className="btn text-lg bg-white bg-opacity-10 px-8 py-2"
-          onClick={() => dispatch({ type: "decrement" })}
-        >
-          {" - "}
-        </button>
+        <Btn onclick={() => dispatch({ type: "Increment" })}>{" + "}</Btn>
+        <Btn onclick={() => dispatch({ type: "decrement" })}>{" - "}</Btn>
       </div>
     </div>
   );

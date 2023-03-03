@@ -8,25 +8,20 @@ import { CodeBlock } from "./Components/CodeBlock";
 import { slide } from "./util/slide";
 import { AiOutlineArrowDown, AiOutlineArrowUp } from "react-icons/ai";
 import bg from "./assets/waves.jpg";
+import { Btn } from "./Components/Btn";
 
 const App = () => {
   return (
     <div className="bg-reactDark3 relative">
       <nav className="fixed left-full -translate-x-full z-20 hidden lg:block">
         <div className="flex flex-col justify-between items-center h-screen p-4">
-          <button
-            onClick={() => slide("up")}
-            className="focus:outline-none p-4 bg-white bg-opacity-10 rounded-[50%] aspect-square w-fit"
-          >
+          <Btn onclick={() => slide("up")} rounded>
             <AiOutlineArrowUp className="text-white" />
-          </button>
+          </Btn>
 
-          <button
-            onClick={() => slide("down")}
-            className="p-4 bg-white bg-opacity-10 rounded-[50%] aspect-square w-fit"
-          >
+          <Btn rounded onclick={() => slide("down")}>
             <AiOutlineArrowDown className="text-white" />
-          </button>
+          </Btn>
         </div>
       </nav>
       <TransitionsSlide title="State / Props" background={bg}>
@@ -132,9 +127,6 @@ const ParentComponent = () => {
         <UseStateCode />
       </Slide>
       <Slide vertical={true}>
-        <TextSection>
-          <h2 className="h2">UseState Example</h2>
-        </TextSection>
         <UseState />
       </Slide>
 
@@ -152,10 +144,7 @@ const ParentComponent = () => {
         </TextSection>
         <UseReducerCode />
       </Slide>
-      <Slide vertical={true}>
-        <TextSection>
-          <h2 className="h2">UseReducer Example</h2>
-        </TextSection>
+      <Slide>
         <UseReducer />
       </Slide>
 

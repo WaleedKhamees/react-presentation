@@ -1,6 +1,6 @@
 import { HTMLAttributes, ReactNode } from "react";
 
-interface TransitionsSlideTypes extends HTMLAttributes<HTMLDivElement> {
+interface TransitionSlidesPropTypes extends HTMLAttributes<HTMLDivElement> {
   background?: string;
   title: string;
   children?: ReactNode;
@@ -10,7 +10,7 @@ export const TransitionsSlide = ({
   children,
   className,
   background,
-}: TransitionsSlideTypes) => {
+}: TransitionSlidesPropTypes) => {
   return (
     <div
       className={`flex flex-col w-screen h-screen items-center justify-center relative ${className}`}
