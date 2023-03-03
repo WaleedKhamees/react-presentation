@@ -1,19 +1,19 @@
-import { StateAndProps } from "./pages/StateAndProps";
-import { createContext, useEffect, useState } from "react";
-import { NavBar } from "./Components/NavBar";
+import { AiOutlineArrowRight } from "react-icons/ai";
+import { CodeBlock } from "../Components/CodeBlock";
 
-type DarkModeContextType = {
-  darkMode: boolean;
-  toggleDarkMode: (dark: boolean) => void;
-};
-export const DarkModeContext = createContext<DarkModeContextType>({
+export const UseContextExample = () => {
+  return (
+    <>
+      <CodeBlock fileName="App.tsx (Creating Context)">
+        {`const DarkModeContext = createContext({
   darkMode: false,
   toggleDarkMode: () => undefined,
 });
 
 const App = () => {
-  const [darkMode, setDarkMode] = useState<boolean>(false);
-  const toggleDarkMode = (dark: boolean) => {
+  const [darkMode, setDarkMode] = useState(false);
+
+  const toggleDarkMode = (dark) => {
     setDarkMode(dark);
     localStorage.setItem("theme", dark ? "dark" : "light");
     if (dark) document.documentElement.classList.add("dark");
@@ -28,12 +28,9 @@ const App = () => {
       toggleDarkMode(true);
     }
   }, []);
+
   return (
-    <div
-      className="bg-white relative flex flex-col items-center gap-12
-      md:gap-0
-      dark:bg-reactDark3"
-    >
+    <div>
       <DarkModeContext.Provider value={{ darkMode, toggleDarkMode }}>
         <NavBar />
         <StateAndProps />
@@ -41,5 +38,17 @@ const App = () => {
     </div>
   );
 };
-
-export default App;
+`}
+      </CodeBlock>
+      <p className="p">
+        <AiOutlineArrowRight />
+      </p>
+      <CodeBlock fileName="StateAndProps.tsx (using Context)">
+        {`import { DarkModeContext } from "../App";
+import { useContext } from "react";
+...
+const { darkMode, toggleDarkMode } = useContext(DarkModeContext);`}
+      </CodeBlock>
+    </>
+  );
+};

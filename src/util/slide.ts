@@ -13,15 +13,6 @@ export const slide = (direction: "up" | "down") => {
     const calValue =
         Math.round(scrollValue / document.documentElement.clientHeight) *
         document.documentElement.clientHeight;
-    console.table({
-        scroll,
-        up,
-        down,
-        scrollValue,
-        calValue:
-            Math.round(scrollValue / document.documentElement.clientHeight) *
-            document.documentElement.clientHeight,
-    });
     window.scrollTo({
         behavior: "smooth",
         top: calValue,

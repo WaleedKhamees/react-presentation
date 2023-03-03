@@ -14,19 +14,19 @@
     font-weight: inherit;
   }
   .display {
-    @apply h-fit text-5xl font-bold tracking-[-0.005em] text-white;
+    @apply h-fit text-5xl font-bold tracking-[-0.005em] dark:text-white text-black;
   }
   .h1 {
-    @apply h-fit text-[1.8rem] leading-[2.125rem] font-bold tracking-[-0.005em] mb-[0.5em] text-white;
+    @apply h-fit text-[1.8rem] leading-[2.125rem] font-bold tracking-[-0.005em] mb-[0.5em] dark:text-white text-black;
   }
   .h2 {
-    @apply h-fit text-[1.5rem] leading-[1.875rem] font-semibold tracking-[0em] mb-[0.5em] text-white;
+    @apply h-fit text-[1.5rem] leading-[1.875rem] font-semibold tracking-[0em] mb-[0.5em] dark:text-white text-black;
   }
   .h3 {
-    @apply h-fit text-xl leading-[1.5rem] font-medium tracking-[0em] mb-[0.5em] text-white;
+    @apply h-fit text-xl leading-[1.5rem] font-medium tracking-[0em] mb-[0.5em] dark:text-white text-black;
   }
   .p {
-    @apply h-fit leading-[24px] tracking-[0em] mb-[0.5em] text-body;
+    @apply h-fit leading-[24px] tracking-[0em] mb-[0.5em] dark:text-bodyDark text-bodyLight;
   }
   .outlinebody {
     @apply h-fit text-sm font-bold leading-[18px] tracking-[0.06em] uppercase;
@@ -37,15 +37,12 @@
   .a {
     @apply h-fit text-base leading-[24px] font-normal tracking-[0em] mb-[0.5em];
   }
-  .input {
-    @apply w-full py-2 px-4 rounded-lg p text-Body border border-Body placeholder:text-Small outline-none;
-  }
 
-  .code {
-    @apply py-[1px] px-[2px] leading-[21px] h-full;
+  code {
+    @apply py-[1px] px-[2px] leading-[21px] h-full dark:bg-white bg-black dark:bg-opacity-10 bg-opacity-10 rounded-md;
   }
   .ul {
-    @apply space-y-1 text-body list-disc list-inside;
+    @apply space-y-1 dark:text-bodyDark text-bodyLight list-disc list-inside;
   }
   .ol {
   }

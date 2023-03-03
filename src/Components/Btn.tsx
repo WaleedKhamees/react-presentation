@@ -1,22 +1,26 @@
-import { MouseEventHandler, ReactNode } from "react";
+import { HTMLAttributes, MouseEventHandler, ReactNode } from "react";
 
-interface BtnPropType {
+interface BtnPropType extends HTMLAttributes<HTMLButtonElement> {
   children?: ReactNode | ReactNode[];
-  onclick?: MouseEventHandler;
   rounded?: boolean | undefined;
+  rectangle?: boolean | undefined;
 }
 
-export const Btn = ({ children, onclick, rounded }: BtnPropType) => {
+export const Btn = ({
+  children,
+  rounded,
+  onClick,
+  className,
+  rectangle,
+}: BtnPropType) => {
   return (
     <button
-      onClick={(e) => onclick && onclick(e)}
-      className={`focus:outline-none bg-white bg-opacity-10 w-fit
-      text-white 
-      ${
-        rounded
-          ? "rounded-[50%] aspect-square p-4"
-          : "bg-white bg-opacity-10 px-8 py-2 rounded-lg"
-      }
+      onClick={(e) => onClick && onClick(e)}
+      className={`focus:outline-none dark:bg-white bg-black dark:bg-opacity-10 bg-opacity-10 min-w-fit
+      dark:text-white dark:fill-white text-black fill-black
+      ${rounded ? "rounded-full aspect-square p-4" : ""} 
+      ${rectangle ? "px-8 py-2 rounded-lg" : ""}  
+      ${className} 
       `}
     >
       {children}

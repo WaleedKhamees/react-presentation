@@ -1,9 +1,6 @@
 import {
-  KeyboardEvent,
   ReactNode,
   useEffect,
-  useLayoutEffect,
-  useRef,
 } from "react";
 import { slide } from "../util/slide";
 interface SlideProps {
@@ -46,11 +43,11 @@ export const Slide = ({ children, reversed, vertical }: SlideProps) => {
   }, []);
   return (
     <section
+    id="slide"
       className={`md:w-full md:h-screen gap-8 md:gap-4
-      flex slide items-center justify-center p-4 w-full overflow-clip
+      flex slide items-center justify-center p-4 w-full overflow-clip flex-col max-w-[1200px] m-auto
       ${vertical ? "md:flex-col" : ""}
       ${reversed ? "md:flex-row-reverse" : "md:flex-row"}
-      flex-col max-w-[1200px] m-auto
       `}
     >
       {children}

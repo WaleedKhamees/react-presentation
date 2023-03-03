@@ -6,12 +6,8 @@ export const UseReducerCode = () => (
   <CodeBlock fileName="UseReducer.tsx (Ignore Types)">{`const InitialState = {
     number: 0,
   };
-  type ActionType = { type: "Increment" } | { type: "decrement" };
   
-  const reducer = (
-    state: typeof InitialState,
-    action: ActionType
-  ): typeof InitialState => {
+  const reducer = (state, action) => {
     switch (action.type) {
       case "Increment":
         return { number: state.number + 1 };
@@ -21,8 +17,9 @@ export const UseReducerCode = () => (
         throw new Error("Invalid Action Type");
     }
   };
-  export const UseReducer = () => {
-    const [state, dispatch] = useReducer(reducer, InitialState);
+  
+  const UseReducer = () => {
+    const [state, dispatch] = React.useReducer(reducer, InitialState);
     return (
       <div>
         <h2>{state.number}</h2>
@@ -32,7 +29,8 @@ export const UseReducerCode = () => (
         </div>
       </div>
     );
-  };`}</CodeBlock>
+  };
+  `}</CodeBlock>
 );
 
 const InitialState = {
@@ -60,8 +58,12 @@ export const UseReducer = () => {
       <h2 className="h2">UseReducer Example</h2>
       <h2 className="h2">{state.number}</h2>
       <div className="flex gap-4">
-        <Btn onclick={() => dispatch({ type: "Increment" })}>{" + "}</Btn>
-        <Btn onclick={() => dispatch({ type: "decrement" })}>{" - "}</Btn>
+        <Btn rectangle onClick={() => dispatch({ type: "Increment" })}>
+          {" + "}
+        </Btn>
+        <Btn rectangle onClick={() => dispatch({ type: "decrement" })}>
+          {" - "}
+        </Btn>
       </div>
     </div>
   );

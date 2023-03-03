@@ -22,8 +22,8 @@ export const UseState = () => {
       <h2 className="h2">UseState Example</h2>
       <h2 className="h2">{number}</h2>
       <div className="flex gap-4">
-        <Btn onclick={() => setNumber(number + 1)}>{" + "}</Btn>
-        <Btn onclick={() => setNumber(number - 1)}>{" - "}</Btn>
+        <Btn rectangle onClick={() => setNumber(number + 1)}>{" + "}</Btn>
+        <Btn rectangle onClick={() => setNumber(number - 1)}>{" - "}</Btn>
       </div>
     </div>
   );
