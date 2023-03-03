@@ -32,11 +32,12 @@ export const Slide = ({ children, reversed, vertical }: SlideProps) => {
   }, []);
   return (
     <section
-      className={`flex w-full
-      h-screen overflow-clip
+      className={`flex w-full h-screen overflow-clip
       slide items-center justify-center p-4 gap-4 
-      ${vertical ? "flex-col" : "md:flex-row flex-col"}
-      max-w-[1200px] m-auto
+      ${vertical ? "md:flex-col" : ""}
+      ${reversed ? "md:flex-row-reverse" : "md:flex-row"}
+      flex-col
+      max-w-[1200px] m-auto h-screen
       `}
     >
       {children}

@@ -1,6 +1,4 @@
 import { HTMLAttributes, ReactNode } from "react";
-import { Slide } from "./Slide";
-import { TextSection } from "./TextSection";
 
 interface TransitionsSlideTypes extends HTMLAttributes<HTMLDivElement> {
   background?: string;
