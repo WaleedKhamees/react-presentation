@@ -12,7 +12,11 @@ import { useContext } from "react";
 
 import { DarkModeContext } from "../App";
 import { UseContextExample } from "../examples/UseContext";
-import { DataFetching, DataFetchingExample } from "../examples/DataFetching";
+import {
+  DataFetching,
+  DataFetchingAxios,
+  DataFetchingFetch,
+} from "../examples/DataFetching";
 export const StateAndProps = () => {
   const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
   return (
@@ -210,15 +214,61 @@ const ParentComponent = () => {
           <h2 className="h2">Data Fetching</h2>
           <p className="p">
             Data fetching is a common use case in React applications. There are
-            various libraries and methods for fetching data, including the fetch
-            API, axios, and the <code>useEffect</code> hook. Data fetching is
-            usually done in the <code>useEffect</code> hook, which is a built-in
-            React hook for handling side effects. The <code>useEffect</code>{" "}
-            hook allows for running code after the component is mounted, and for
-            cleaning up after the component is unmounted.
+            various libraries and methods for fetching data, including the{" "}
+            <code>fetch</code> API, <code>axios</code>, and the{" "}
+            <code>useEffect</code> hook. Data fetching is usually done in the{" "}
+            <code>useEffect</code> hook, which is a built-in React hook for
+            handling side effects. The <code>useEffect</code> hook allows for
+            running code after the component is mounted, and for cleaning up
+            after the component is unmounted.
           </p>
         </TextSection>
-        <DataFetchingExample />
+      </Slide>
+      <Slide>
+        <TextSection>
+          <h2 className="h2">Fetch Api</h2>
+          <ul className="ul">
+            <li>
+              Built-in to modern browsers, no additional dependencies needed
+            </li>
+            <li>Lightweight and easy to use</li>
+            <li>Supports both simple and complex requests</li>
+            <li>
+              Returns a Promise which is easily integrated with{" "}
+              <code>async/await</code>
+            </li>
+          </ul>
+        </TextSection>
+        <DataFetchingFetch />
+      </Slide>
+      <Slide>
+        <TextSection>
+          <h2 className="h2">Axios</h2>
+          <h3 className="h3">Pros of using Axios</h3>
+          <ul className="ul">
+            <li>
+              Simple and consistent API for handling requests and responses
+            </li>
+            <li>
+              Provides a more convenient and powerful interface than the
+              built-in fetch API
+            </li>
+            <li>Automatically converts response data to JSON format</li>
+            <li>Supports cancellation of requests</li>
+            <li>
+              Supports sending data in different formats such as JSON and
+              FormData
+            </li>
+            <li>Good error handling capabilities</li>
+          </ul>
+          <h3 className="h3">Cons of Using Axios</h3>
+          <ul className="ul">
+            <li>Adds an extra dependency to the project.</li>
+            <li>Slightly larger bundle size than the built-in fetch API.</li>
+            <li>May be overkill for simple data fetching needs.</li>
+          </ul>
+        </TextSection>
+        <DataFetchingAxios />
       </Slide>
       <Slide>
         <DataFetching />

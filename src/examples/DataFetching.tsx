@@ -4,7 +4,7 @@ import { FaQuoteLeft } from "react-icons/fa";
 import { Btn } from "../Components/Btn";
 import { CodeBlock } from "../Components/CodeBlock";
 
-export const DataFetchingExample = () => {
+export const DataFetchingFetch = () => {
   return (
     <CodeBlock fileName="DataFetching.tsx">
       {`export const DataFetching = () => {
@@ -19,6 +19,58 @@ export const DataFetchingExample = () => {
     setIsLoading(true);
     const quoteRes = await fetch("https://dummyjson.com/quotes/random");
     const quote = await quoteRes.json();
+    setIsLoading(false);
+    setQuote(quote);
+  };
+  
+  useEffect(() => {
+    fetchQuote();
+  }, []);
+
+  return (
+    <div>
+      {isLoading ? (
+        <AiOutlineLoading />
+      ) : (
+        <blockquote>
+          <div>
+            <FaQuoteLeft />
+          </div>
+          <div>
+            <p>{quote.quote}</p>
+            <p>- {quote.author}</p>
+          </div>
+        </blockquote>
+      )}
+      <Btn onClick={() => fetchQuote()}>
+        Fetch Another One
+      </Btn>
+    </div>
+  );
+};
+`}
+    </CodeBlock>
+  );
+};
+
+export const DataFetchingAxios = () => {
+  return (
+    <CodeBlock fileName="DataFetching.tsx">
+      {`import axios from "axios";
+import { useState, useEffect } from "react";
+
+export const DataFetching = () => {
+  const [quote, setQuote] = useState({
+    author: "",
+    id: 0,
+    quote: "",
+  });
+  const [isLoading, setIsLoading] = useState(true);
+  
+  const fetchQuote = async () => {
+    setIsLoading(true);
+    const quoteRes = await axios.get("https://dummyjson.com/quotes/random");
+    const quote = quoteRes.data;
     setIsLoading(false);
     setQuote(quote);
   };
