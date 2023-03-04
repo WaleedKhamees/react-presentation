@@ -12,6 +12,7 @@ import { useContext } from "react";
 
 import { DarkModeContext } from "../App";
 import { UseContextExample } from "../examples/UseContext";
+import { DataFetching, DataFetchingExample } from "../examples/DataFetching";
 export const StateAndProps = () => {
   const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
   return (
@@ -82,7 +83,7 @@ export const StateAndProps = () => {
       {/* Props */}
       <Slide reversed={true}>
         <TextSection>
-          <h2 className="h2">Props</h2>
+          <h2 className="h2">Props and Passing Them</h2>
           <p className="p">
             React props are used to pass data between components, allowing for
             communication between parent and child components. They are
@@ -111,9 +112,9 @@ const ParentComponent = () => {
         <TextSection>
           <h2 className="h2">useState</h2>
           <p className="p">
-            The useState hook is a built-in React hook that allows for state
-            management in functional components. It accepts an initial state
-            value and returns an array with the current state value and a
+            The <code>useState</code> hook is a built-in React hook that allows
+            for state management in functional components. It accepts an initial
+            state value and returns an array with the current state value and a
             function to update the state. This allows the component to re-render
             when the state is updated, changing the view of the user interface.
           </p>
@@ -129,12 +130,12 @@ const ParentComponent = () => {
         <TextSection>
           <h2 className="h2">useReducer</h2>
           <p className="p">
-            The useReducer hook is another built-in React hook that allows for
-            more complex state management. It works similarly to the useState
-            hook, but uses a reducer function to update the state based on
-            dispatched actions. The useReducer hook is useful when the state has
-            complex logic, and when the state update depends on the previous
-            state.
+            The <code>useReducer</code> hook is another built-in React hook that
+            allows for more complex state management. It works similarly to the{" "}
+            <code>useState</code> hook, but uses a reducer function to update
+            the state based on dispatched actions. The <code>useReducer</code>{" "}
+            hook is useful when the state has complex logic, and when the state
+            update depends on the previous state.
           </p>
         </TextSection>
         <UseReducerCode />
@@ -148,11 +149,11 @@ const ParentComponent = () => {
         <TextSection>
           <h2 className="h2">useMemo</h2>
           <p className="p">
-            The useMemo hook is used for optimizing performance by memoizing
-            expensive computations. It accepts a function and an array of
-            dependencies and only re-computes the result when the dependencies
-            change. The useMemo hook is useful when the computation is expensive
-            and has to be called several times.
+            The <code>useMemo</code> hook is used for optimizing performance by
+            memoizing expensive computations. It accepts a function and an array
+            of dependencies and only re-computes the result when the
+            dependencies change. The <code>useMemo</code> hook is useful when
+            the computation is expensive and has to be called several times.
           </p>
         </TextSection>
         <UseMemoExample />
@@ -165,12 +166,12 @@ const ParentComponent = () => {
         <TextSection>
           <h2 className="h2">useCallback</h2>
           <p className="p">
-            The useCallback hook is also used for performance optimization by
-            memoizing functions. It accepts a function and an array of
-            dependencies and only re-creates the function when the dependencies
-            change. This is useful when the function needs to be passed down to
-            child components, and the child components should only re-render
-            when the function is updated.
+            The <code>useCallback</code> hook is also used for performance
+            optimization by memoizing functions. It accepts a function and an
+            array of dependencies and only re-creates the function when the
+            dependencies change. This is useful when the function needs to be
+            passed down to child components, and the child components should
+            only re-render when the function is updated.
           </p>
         </TextSection>
         <CodeBlock fileName="UseCallback Syntax">
@@ -202,6 +203,25 @@ const ParentComponent = () => {
 
       <Slide>
         <UseContextExample />
+      </Slide>
+
+      <Slide>
+        <TextSection>
+          <h2 className="h2">Data Fetching</h2>
+          <p className="p">
+            Data fetching is a common use case in React applications. There are
+            various libraries and methods for fetching data, including the fetch
+            API, axios, and the <code>useEffect</code> hook. Data fetching is
+            usually done in the <code>useEffect</code> hook, which is a built-in
+            React hook for handling side effects. The <code>useEffect</code>{" "}
+            hook allows for running code after the component is mounted, and for
+            cleaning up after the component is unmounted.
+          </p>
+        </TextSection>
+        <DataFetchingExample />
+      </Slide>
+      <Slide>
+        <DataFetching />
       </Slide>
     </>
   );
