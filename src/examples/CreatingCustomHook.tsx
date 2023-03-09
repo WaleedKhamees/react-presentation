@@ -31,26 +31,22 @@ export const useFetch = (url) => {
   );
 };
 
-export const UsingCutomHookExample = () => {
+export const UsingCustomHookExample = () => {
   return (
-    <CodeBlock fileName="DataFetching.tsx">{`/* const [quote, setQuote] = useState<quote>({
-    author: "",
-    id: 0,
-    quote: "",
-  });
+    <CodeBlock fileName="DataFetching.tsx">{`/* const [quote, setQuote] = useState<quote>({ author: "", id: 0, quote: "",});
 const [isLoading, setIsLoading] = useState(true);
 const fetchQuote = async () => {
   setIsLoading(true);
   const quoteRes = await 
   fetch("https://dummyjson.com/quotes/random");
-  const quote = (await quoteRes.json()) as quote;
+  const quote = (await quoteRes.json());
   setIsLoading(false);
   setQuote(quote);
 }; */
 const {
   data: [quote, error, isLoading],
   refetch: fetchQuote,
-} = useFetch<quote>("https://dummyjson.com/quotes/random");
+} = useFetch("https://dummyjson.com/quotes/random");
 `}</CodeBlock>
   );
 };

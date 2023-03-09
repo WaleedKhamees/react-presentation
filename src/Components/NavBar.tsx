@@ -1,5 +1,11 @@
 import { useContext } from "react";
-import { AiOutlineArrowDown, AiOutlineArrowUp } from "react-icons/ai";
+import {
+  AiOutlineArrowDown,
+  AiOutlineArrowUp,
+  AiOutlineHome,
+} from "react-icons/ai";
+import { BsMoon, BsSun } from "react-icons/bs";
+import { Link } from "react-router-dom";
 import { DarkModeContext } from "../App";
 import { slide } from "../util/slide";
 import { Btn } from "./Btn";
@@ -13,10 +19,12 @@ export const NavBar = () => {
         <Btn onClick={() => slide("up")} rounded>
           <AiOutlineArrowUp />
         </Btn>
-        {/*  <ul className="flex flex-col items-center gap-4">
-          <Btn rounded>
-            <AiOutlineHome />
-          </Btn>
+        <ul className="flex flex-col items-center gap-4">
+          <Link to="/">
+            <Btn rounded>
+              <AiOutlineHome />
+            </Btn>
+          </Link>
           {darkMode ? (
             <Btn rounded onClick={() => toggleDarkMode(false)}>
               <BsSun />
@@ -26,7 +34,7 @@ export const NavBar = () => {
               <BsMoon />
             </Btn>
           )}
-        </ul> */}
+        </ul>
         <Btn rounded onClick={() => slide("down")}>
           <AiOutlineArrowDown />
         </Btn>

@@ -12,16 +12,13 @@ export const Slide = ({ children, reversed, vertical }: SlideProps) => {
   useEffect(() => {
     // @ts-expect-error
     const eventHandler = (e) => {
-      if (!e.shiftKey && (e.key === "ArrowDown" || e.key === "s"))
-        slide("down");
-      else if (!e.shiftKey && (e.key === "ArrowUp" || e.key === "w"))
-        slide("up");
+      if (!e.shiftKey && e.key === "ArrowDown") slide("down");
+      else if (!e.shiftKey && e.key === "ArrowUp") slide("up");
     };
     if (document.body.clientWidth > 800) {
       window.addEventListener("keydown", (e) => {
         if (
           [
-            "Space",
             "ArrowUp",
             "ArrowDown",
             "ArrowLeft",

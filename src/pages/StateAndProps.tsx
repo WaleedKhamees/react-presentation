@@ -17,11 +17,12 @@ import {
   DataFetchingAxios,
   DataFetchingFetch,
 } from "../examples/DataFetching";
-import { UseRefExample } from "../examples/UseRef";
+import { UseRefCodeExample, UseRefExample } from "../examples/UseRef";
 import {
   CreatingCustomHookExample,
-  UsingCutomHookExample,
+  UsingCustomHookExample,
 } from "../examples/CreatingCustomHook";
+
 export const StateAndProps = () => {
   const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
   return (
@@ -280,23 +281,7 @@ const ParentComponent = () => {
         <DataFetching />
       </Slide>
 
-      {/* useRef hook */}
-      <Slide>
-        <TextSection>
-          <h2 className="h2">useRef</h2>
-          <p className="p">
-            The useRef hook is used for accessing DOM elements or storing
-            mutable values between renders. It returns a mutable ref object with
-            a current property that can be updated. This is useful when the
-            component needs to access a DOM element or when the component needs
-            to keep a value between renders.
-          </p>
-        </TextSection>
-        <UseRefExample />
-      </Slide>
-      {/* useRef form example */}
-      <Slide></Slide>
-
+      {/* Custom Hooks */}
       <Slide>
         <TextSection>
           <h2 className="h2">Creating Custom Hooks</h2>
@@ -327,7 +312,26 @@ const ParentComponent = () => {
 
       <Slide>
         <CreatingCustomHookExample />
-        <UsingCutomHookExample />
+        <UsingCustomHookExample />
+      </Slide>
+
+      {/* useRef hook */}
+      <Slide reversed>
+        <TextSection>
+          <h2 className="h2">useRef</h2>
+          <p className="p">
+            The useRef hook is used for accessing DOM elements or storing
+            mutable values between renders. It returns a mutable ref object with
+            a current property that can be updated. This is useful when the
+            component needs to access a DOM element or when the component needs
+            to keep a value between renders.
+          </p>
+        </TextSection>
+        <UseRefCodeExample />
+      </Slide>
+      {/* useRef form example */}
+      <Slide>
+        <UseRefExample />
       </Slide>
     </>
   );
