@@ -3,10 +3,10 @@ import { Btn } from "../Components/Btn";
 import { CodeBlock } from "../Components/CodeBlock";
 
 export const UseReducerCode = () => (
-  <CodeBlock fileName="UseReducer.tsx (Ignore Types)">{`const InitialState = {
+  <CodeBlock fileName="UseReducer.tsx">{`const InitialState = {
     number: 0,
   };
-  
+
   const reducer = (state, action) => {
     switch (action.type) {
       case "Increment":
@@ -17,20 +17,19 @@ export const UseReducerCode = () => (
         throw new Error("Invalid Action Type");
     }
   };
-  
+
   const UseReducer = () => {
-    const [state, dispatch] = React.useReducer(reducer, InitialState);
+    const [state, dispatch] = useReducer(reducer, InitialState);
     return (
       <div>
         <h2>{state.number}</h2>
         <div>
-          <button onClick={() => dispatch({type:"Increment"})}>{" + "}</button>
-          <button onClick={() => dispatch({type: "decrement"})}>{" - "}</button>
+          <button onClick={() => dispatch({type:"Increment"})}>+</button>
+          <button onClick={() => dispatch({type: "decrement"})}>-</button>
         </div>
       </div>
     );
-  };
-  `}</CodeBlock>
+  };`}</CodeBlock>
 );
 
 const InitialState = {

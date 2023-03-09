@@ -18,6 +18,10 @@ import {
   DataFetchingFetch,
 } from "../examples/DataFetching";
 import { UseRefExample } from "../examples/UseRef";
+import {
+  CreatingCustomHookExample,
+  UsingCutomHookExample,
+} from "../examples/CreatingCustomHook";
 export const StateAndProps = () => {
   const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
   return (
@@ -210,6 +214,7 @@ const ParentComponent = () => {
         <UseContextExample />
       </Slide>
 
+      {/* Data Fetching */}
       <Slide>
         <TextSection>
           <h2 className="h2">Data Fetching</h2>
@@ -242,7 +247,7 @@ const ParentComponent = () => {
         </TextSection>
         <DataFetchingFetch />
       </Slide>
-      <Slide>
+      <Slide reversed>
         <TextSection>
           <h2 className="h2">Axios</h2>
           <h3 className="h3">Pros of using Axios</h3>
@@ -274,6 +279,8 @@ const ParentComponent = () => {
       <Slide>
         <DataFetching />
       </Slide>
+
+      {/* useRef hook */}
       <Slide>
         <TextSection>
           <h2 className="h2">useRef</h2>
@@ -286,6 +293,41 @@ const ParentComponent = () => {
           </p>
         </TextSection>
         <UseRefExample />
+      </Slide>
+      {/* useRef form example */}
+      <Slide></Slide>
+
+      <Slide>
+        <TextSection>
+          <h2 className="h2">Creating Custom Hooks</h2>
+          <p className="p">
+            Custom hooks are reusable functions that encapsulate common logic in
+            a component. They are a way to share stateful logic between
+            components without having to use higher-order components, render
+            props, or other patterns. Custom hooks allow you to abstract complex
+            logic into a reusable and testable module that can be shared across
+            multiple components.
+          </p>
+          <ul className="ul">
+            <li>
+              Reusability: Custom hooks are reusable functions that can be
+              shared between components, reducing code duplication.
+            </li>
+            <li>
+              Abstraction: Custom hooks abstract away complex logic, making it
+              easier to reason about and test.
+            </li>
+            <li>
+              Encapsulation: Custom hooks encapsulate stateful logic, making it
+              easier to manage and debug.
+            </li>
+          </ul>
+        </TextSection>
+      </Slide>
+
+      <Slide>
+        <CreatingCustomHookExample />
+        <UsingCutomHookExample />
       </Slide>
     </>
   );

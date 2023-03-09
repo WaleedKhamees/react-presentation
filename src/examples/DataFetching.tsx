@@ -3,6 +3,7 @@ import { AiOutlineLoading } from "react-icons/ai";
 import { FaQuoteLeft } from "react-icons/fa";
 import { Btn } from "../Components/Btn";
 import { CodeBlock } from "../Components/CodeBlock";
+import { useFetch } from "../util/UseFetch";
 
 export const DataFetchingFetch = () => {
   return (
@@ -111,7 +112,7 @@ type quote = {
 };
 
 export const DataFetching = () => {
-  const [quote, setQuote] = useState<quote>({
+  /* const [quote, setQuote] = useState<quote>({
     author: "",
     id: 0,
     quote: "",
@@ -123,10 +124,12 @@ export const DataFetching = () => {
     const quote = (await quoteRes.json()) as quote;
     setIsLoading(false);
     setQuote(quote);
-  };
-  useEffect(() => {
-    fetchQuote();
-  }, []);
+  }; */
+
+  const {
+    data: [quote, error, isLoading],
+    refetch: fetchQuote,
+  } = useFetch<quote>("https://dummyjson.com/quotes/random");
 
   return (
     <div className="flex flex-col items-center justify-between md:max-w-[50%] h-fit gap-8 w-full">
@@ -138,8 +141,8 @@ export const DataFetching = () => {
             <FaQuoteLeft className="w-full h-12" />
           </div>
           <div className="space-y-4">
-            <p className="p">{quote.quote}</p>
-            <p className="p font-semibold"> - {quote.author}</p>
+            <p className="p">{quote?.quote}</p>
+            <p className="p font-semibold"> - {quote?.author}</p>
           </div>
         </blockquote>
       )}

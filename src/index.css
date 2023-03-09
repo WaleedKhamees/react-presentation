@@ -35,7 +35,7 @@
     @apply h-fit text-[12px] leading-[12px] font-semibold tracking-[0em] mb-[0.5em];
   }
   .a {
-    @apply h-fit text-base leading-[24px] font-normal tracking-[0em] mb-[0.5em];
+    @apply h-fit text-base leading-[24px] font-normal tracking-[0em] mb-[0.5em] text-[#0070f3] dark:text-[#3291ff];
   }
   code {
     @apply py-[1px] px-[2px] leading-[21px] h-full dark:bg-white bg-black dark:bg-opacity-10 bg-opacity-10 rounded-md;
