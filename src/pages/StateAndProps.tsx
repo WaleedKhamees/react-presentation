@@ -17,6 +17,7 @@ import {
   DataFetchingAxios,
   DataFetchingFetch,
 } from "../examples/DataFetching";
+import { UseRefExample } from "../examples/UseRef";
 export const StateAndProps = () => {
   const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
   return (
@@ -272,6 +273,19 @@ const ParentComponent = () => {
       </Slide>
       <Slide>
         <DataFetching />
+      </Slide>
+      <Slide>
+        <TextSection>
+          <h2 className="h2">useRef</h2>
+          <p className="p">
+            The useRef hook is used for accessing DOM elements or storing
+            mutable values between renders. It returns a mutable ref object with
+            a current property that can be updated. This is useful when the
+            component needs to access a DOM element or when the component needs
+            to keep a value between renders.
+          </p>
+        </TextSection>
+        <UseRefExample />
       </Slide>
     </>
   );

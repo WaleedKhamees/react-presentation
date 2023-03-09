@@ -40,9 +40,6 @@ const App = () => {
 };
 `}
       </CodeBlock>
-      <p className="p">
-        <AiOutlineArrowRight />
-      </p>
       <CodeBlock fileName="StateAndProps.tsx (using Context)">
         {`import { DarkModeContext } from "../App";
 import { useContext } from "react";
