@@ -13,7 +13,7 @@ export const TransitionsSlide = ({
 }: TransitionSlidesPropTypes) => {
   return (
     <div
-      className={`flex flex-col w-screen h-screen items-center justify-center relative ${className}`}
+      className={`flex flex-col w-screen h-screen items-center gap-4 justify-center relative ${className}`}
     >
       <h1 className="display text-white mb-[0.25em] z-20">{title}</h1>
       {children}
