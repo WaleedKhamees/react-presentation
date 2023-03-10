@@ -34,13 +34,11 @@ export const UseRefCodeExample = () => {
 };
 
 export const UseRefExample = () => {
-  const inputRef = useRef(null);
+  const inputRef = useRef<HTMLInputElement>(null);
   const [message, setMessage] = useState("");
 
   const handleClick = (e: FormEvent) => {
-    // Access the input element's value using inputRef
     e.preventDefault();
-    // @ts-expect-error
     const inputValue = inputRef.current?.value as string;
     setMessage("User Entered : " + inputValue);
   };
@@ -50,8 +48,10 @@ export const UseRefExample = () => {
       <input
         type="text"
         ref={inputRef}
-        className="dark:bg-white dark:bg-opacity-20 dark:text-white  
-        py-2 px-4 rounded-lg outline-none"
+        placeholder="Enter Something"
+        className="dark:bg-white dark:bg-opacity-10 dark:text-white  dark:border-white dark:border-opacity-10
+        bg-black bg-opacity-10 text-black border-black border-opacity-10
+        py-2 px-4 rounded-lg outline-none border-2"
       />
       <p className="p text-center">{message}</p>
       <Btn rectangle onClick={handleClick}>

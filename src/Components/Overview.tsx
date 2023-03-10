@@ -11,8 +11,8 @@ export const OverView = ({ children, header, path }: OverView) => {
   return (
     <div
       className="rounded-lg p-4 border dark:border-white
-     border-black dark:border-opacity-20
-      border-opacity-20 flex flex-col justify-between"
+     border-black dark:border-opacity-10
+      border-opacity-10 flex flex-col justify-between"
     >
       <h3 className="h3">{header}</h3>
       <p className="p">{children}</p>

@@ -39,15 +39,12 @@ export const UseMemoExample = () => {
 import { useMemo, useState } from "react";
 import { Btn } from "../Components/Btn";
 
-export const UseMemo = () => {
+export const UseMemo = ({ data }: { data: number[] }) => {
   const [number, setNumber] = useState(100);
 
-  const data = Array.from({ length: 40 }, () => Math.floor(Math.random() * 40));
-
   const processedData = useMemo(() => {
-    const result = data.map((item) => Math.round(Math.log(item ** number)));
-    return result;
-  }, [number, data]);
+    return data.sort((a, b) => a - b);
+  }, [data]);
 
   return (
     <div className="flex flex-col gap-4 items-center">

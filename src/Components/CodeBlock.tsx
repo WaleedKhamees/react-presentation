@@ -9,9 +9,11 @@ import "../github.css";
 export const CodeBlock = ({
   children,
   fileName,
+  full,
 }: {
   children: string;
   fileName?: string;
+  full?: boolean | undefined;
 }) => {
   const Code = useMemo(() => {
     return hljs.highlight(children, { language: "ts" }).value;
@@ -34,7 +36,11 @@ export const CodeBlock = ({
   };
 
   return (
-    <div className="flex flex-col items-center border dark:border-white border-black rounded-lg md:max-w-[50%] w-full max-h-[80%] overflow-clip">
+    <div
+      className={`flex flex-col items-center border dark:border-white border-black rounded-lg 
+      ${full ? "md:max-w-full" : "md:max-w-[50%]"}
+      w-full max-h-[80%] overflow-clip`}
+    >
       <div className="flex items-center justify-between px-4 py-2 w-full">
         <p className="font-mono w-full py-2 dark:text-bodyDark text-bodyLight">
           {fileName ?? "unnamed"}

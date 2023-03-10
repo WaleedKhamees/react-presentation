@@ -137,9 +137,7 @@ export const DataFetching = () => {
         <AiOutlineLoading className="animate-spin dark:text-bodyDark text-bodyLight w-12 h-12" />
       ) : (
         <blockquote className="flex gap-4 w-full dark:text-bodyDark text-bodyLight min-h-12">
-          <div className="w-12 h-12 flex-shrink-0">
-            <FaQuoteLeft className="w-full h-12" />
-          </div>
+          <FaQuoteLeft className="w-12 h-12 flex-shrink-0" />
           <div className="space-y-4">
             <p className="p">{quote?.quote}</p>
             <p className="p font-semibold"> - {quote?.author}</p>

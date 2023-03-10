@@ -4,7 +4,11 @@ import { Slide } from "../Components/Slide";
 import { TextSection } from "../Components/TextSection";
 import { TransitionsSlide } from "../Components/TransitionsSlides";
 import { UseMemo, UseMemoExample } from "../examples/UseMemo";
-import { UseReducer, UseReducerCode } from "../examples/UseReducer";
+import {
+  ComplexUseReducerCode,
+  UseReducer,
+  UseReducerCode,
+} from "../examples/UseReducer";
 import { UseState, UseStateCode } from "../examples/UseState";
 
 import MonkeyAction from "../assets/monkeyAction.gif";
@@ -153,6 +157,9 @@ const ParentComponent = () => {
       <Slide>
         <UseReducer />
       </Slide>
+      <Slide>
+        <ComplexUseReducerCode />
+      </Slide>
 
       {/* UseMemo */}
       <Slide>
@@ -169,7 +176,11 @@ const ParentComponent = () => {
         <UseMemoExample />
       </Slide>
       <Slide>
-        <UseMemo />
+        <UseMemo
+          data={Array.from({ length: 80 }, () =>
+            Math.floor(Math.random() * 80)
+          )}
+        />
       </Slide>
 
       <Slide reversed={true}>
