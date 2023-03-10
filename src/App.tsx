@@ -6,8 +6,7 @@ import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { Routing } from "./pages/Routing";
 import { SlideToTopWrapper } from "./util/SlideToTopWrapper";
-import { Btn } from "./Components/Btn";
-import { TransitionsSlide } from "./Components/TransitionsSlides";
+import { NotFound } from "./pages/NotFound";
 
 type DarkModeContextType = {
   darkMode: boolean;
@@ -44,16 +43,7 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/stateprops" element={<StateAndProps />} />
             <Route path="/routing" element={<Routing />} />
-            <Route
-              path="*"
-              element={
-                <TransitionsSlide title="404 Page Not Found">
-                  <Link to={"/"}>
-                    <Btn rectangle>HomePage</Btn>
-                  </Link>
-                </TransitionsSlide>
-              }
-            />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </SlideToTopWrapper>
       </div>
