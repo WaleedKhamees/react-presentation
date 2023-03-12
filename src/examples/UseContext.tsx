@@ -1,4 +1,3 @@
-import { AiOutlineArrowRight } from "react-icons/ai";
 import { CodeBlock } from "../Components/CodeBlock";
 
 export const UseContextExample = () => {

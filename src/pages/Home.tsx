@@ -1,3 +1,4 @@
+import { AiOutlineGithub, AiOutlineGlobal } from "react-icons/ai";
 import { OverView } from "../Components/Overview";
 import { Slide } from "../Components/Slide";
 
@@ -48,6 +49,27 @@ export const Home = () => {
             React. Custom hooks are also discussed. Understanding these concepts
             is crucial for efficient React development.
           </OverView>
+        </div>
+      </Slide>
+      <Slide>
+        <div className="text-9xl text-white flex gap-8 text-center">
+          <a
+            href="https://github.com/Walid-Kh/react-presentation"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <AiOutlineGithub />
+            <p className="p text-base">Repository</p>
+          </a>
+          <a
+            className="text-9xl"
+            href="http://"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <AiOutlineGlobal />
+            <p className="p text-base">Website</p>
+          </a>
         </div>
       </Slide>
     </>

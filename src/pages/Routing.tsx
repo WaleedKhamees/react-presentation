@@ -69,7 +69,6 @@ export const Routing = () => {
           <h2 className="h2">Adding Links</h2>
           <p className="p">
             Links can be added using built in <code>Link</code> component
-            
           </p>
         </TextSection>
         <AddingLinksExample />

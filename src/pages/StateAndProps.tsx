@@ -1,4 +1,3 @@
-import { Btn } from "../Components/Btn";
 import { CodeBlock } from "../Components/CodeBlock";
 import { Slide } from "../Components/Slide";
 import { TextSection } from "../Components/TextSection";
@@ -12,9 +11,7 @@ import {
 import { UseState, UseStateCode } from "../examples/UseState";
 
 import MonkeyAction from "../assets/monkeyAction.gif";
-import { useContext } from "react";
 
-import { DarkModeContext } from "../App";
 import { UseContextExample } from "../examples/UseContext";
 import {
   DataFetching,
@@ -28,7 +25,6 @@ import {
 } from "../examples/CreatingCustomHook";
 
 export const StateAndProps = () => {
-  const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
   return (
     <>
       <TransitionsSlide title="State / Props">
@@ -107,7 +103,7 @@ export const StateAndProps = () => {
           </p>
         </TextSection>
         <CodeBlock fileName="props Example">
-          {`const CustomButton = ({name} : {name: string}) => {
+          {`const CustomButton = ({name}) => {
   return <button>{name}</button>;
 }
 const ParentComponent = () => {
@@ -230,9 +226,6 @@ const ParentComponent = () => {
             will be returned instead.
           </p>
         </TextSection>
-        <Btn rectangle onClick={() => toggleDarkMode(!darkMode)}>
-          Toggle {darkMode ? "Light" : "Dark"} Mode
-        </Btn>
       </Slide>
 
       <Slide>
