@@ -1,6 +1,6 @@
-import { CodeBlock } from "../Components/CodeBlock";
+import { CodeBlock } from "../../Components/CodeBlock";
 import React, { FormEvent, useRef, useState } from "react";
-import { Btn } from "../Components/Btn";
+import { Btn } from "../../Components/Btn";
 
 export const UseRefCodeExample = () => {
   return (

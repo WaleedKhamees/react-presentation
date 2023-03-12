@@ -1,4 +1,6 @@
-import { CodeBlock } from "../Components/CodeBlock";
+import { useMemo, useState } from "react";
+import { Btn } from "../../Components/Btn";
+import { CodeBlock } from "../../Components/CodeBlock";
 
 export const UseMemoExample = () => {
   return (
@@ -34,9 +36,6 @@ export const UseMemoExample = () => {
     </CodeBlock>
   );
 };
-
-import { useMemo, useState } from "react";
-import { Btn } from "../Components/Btn";
 
 export const UseMemo = ({ data }: { data: number[] }) => {
   const [number, setNumber] = useState(100);

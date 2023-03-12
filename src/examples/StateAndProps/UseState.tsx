@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { Btn } from "../Components/Btn";
-import { CodeBlock } from "../Components/CodeBlock";
+import { Btn } from "../../Components/Btn";
+import { CodeBlock } from "../../Components/CodeBlock";
 
-export const UseStateCode = () => (
+export const UseStateExample = () => (
   <CodeBlock fileName="UseState.tsx before styling">{`export const UseState = () => {
   const [number, setNumber] = useState(0);
   return (
@@ -22,8 +22,12 @@ export const UseState = () => {
       <h2 className="h2">UseState Example</h2>
       <h2 className="h2">{number}</h2>
       <div className="flex gap-4">
-        <Btn rectangle onClick={() => setNumber(number + 1)}>{" + "}</Btn>
-        <Btn rectangle onClick={() => setNumber(number - 1)}>{" - "}</Btn>
+        <Btn rectangle onClick={() => setNumber(number + 1)}>
+          {" + "}
+        </Btn>
+        <Btn rectangle onClick={() => setNumber(number - 1)}>
+          {" - "}
+        </Btn>
       </div>
     </div>
   );

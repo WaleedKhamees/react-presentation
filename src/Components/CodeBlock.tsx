@@ -39,7 +39,8 @@ export const CodeBlock = ({
     <div
       className={`flex flex-col items-center border dark:border-white border-black rounded-lg 
       ${full ? "md:max-w-full" : "md:max-w-[50%]"}
-      w-full max-h-[80%] overflow-clip`}
+      max-h-[80vh] h-fit
+      w-full overflow-clip`}
     >
       <div className="flex items-center justify-between px-4 py-2 w-full">
         <p className="font-mono w-full py-2 dark:text-bodyDark text-bodyLight">
@@ -52,10 +53,10 @@ export const CodeBlock = ({
           {message === "" ? <BsClipboard /> : message}
         </Btn>
       </div>
-      <div className="border-t dark:border-white border-black w-full overflow-scroll">
+      <div className="border-t dark:border-white border-black w-full overflow-scroll h-full">
         <pre className="lang-ts code my-2 px-2 w-fit">
           <code
-            className="code whitespace-pre-wrap"
+            className="code "
             dangerouslySetInnerHTML={{
               __html: Code,
             }}

@@ -1,6 +1,6 @@
 import { useReducer } from "react";
-import { Btn } from "../Components/Btn";
-import { CodeBlock } from "../Components/CodeBlock";
+import { Btn } from "../../Components/Btn";
+import { CodeBlock } from "../../Components/CodeBlock";
 
 export const UseReducerCode = () => (
   <CodeBlock fileName="UseReducer.tsx">{`const InitialState = {

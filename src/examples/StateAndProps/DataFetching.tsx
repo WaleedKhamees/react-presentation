@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { AiOutlineLoading } from "react-icons/ai";
 import { FaQuoteLeft } from "react-icons/fa";
-import { Btn } from "../Components/Btn";
-import { CodeBlock } from "../Components/CodeBlock";
-import { useFetch } from "../util/UseFetch";
+import { Btn } from "../../Components/Btn";
+import { CodeBlock } from "../../Components/CodeBlock";
+import { useFetch } from "../../util/UseFetch";
 
 export const DataFetchingFetch = () => {
   return (

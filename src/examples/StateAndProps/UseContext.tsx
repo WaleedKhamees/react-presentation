@@ -1,4 +1,4 @@
-import { CodeBlock } from "../Components/CodeBlock";
+import { CodeBlock } from "../../Components/CodeBlock";
 
 export const UseContextExample = () => {
   return (

@@ -14,7 +14,7 @@
     font-weight: inherit;
   }
   .display {
-    @apply h-fit text-5xl font-bold tracking-[-0.005em] dark:text-white text-black;
+    @apply h-fit text-3xl font-bold tracking-[-0.005em] dark:text-white text-black;
   }
   .h1 {
     @apply h-fit text-[1.8rem] leading-[2.125rem] font-bold tracking-[-0.005em] mb-[0.5em] dark:text-white text-black;
@@ -49,7 +49,7 @@
   .ol {
   }
   .slide > img {
-    @apply rounded-xl;
+    @apply rounded-xl overflow-clip;
   }
 }
 img,

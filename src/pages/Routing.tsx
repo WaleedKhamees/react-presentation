@@ -2,13 +2,15 @@ import { Slide } from "../Components/Slide";
 import { TextSection } from "../Components/TextSection";
 import { TransitionsSlide } from "../Components/TransitionsSlides";
 import {
+  AddingDynamicRouteExample,
   AddingLinksExample,
   GuardComponentExample,
   RouteGuardingExample,
   RoutingExample,
+  UsingDynamicRouteExample,
   UsingWrapperExample,
   WrapperExample,
-} from "../examples/Routing";
+} from "../examples/Routing/Routing";
 
 export const Routing = () => {
   return (
@@ -73,7 +75,34 @@ export const Routing = () => {
         </TextSection>
         <AddingLinksExample />
       </Slide>
-
+      <Slide>
+        <TextSection>
+          <h2 className="h2">Dynamic Routing</h2>
+          <p className="p">
+            Dynamic routing in React Router DOM v6 allows for passing URL
+            parameters to a component.
+          </p>
+          <p className="p">
+            The parameter name is specified using the : prefix in the path of
+            the {"<Route>"} component, such as /blog/:id.
+          </p>
+          <p className="p">
+            When a URL matches the dynamic route, React Router DOM v6 will
+            extract the parameter value and pass it as a prop to the
+            corresponding component.
+          </p>
+          <p className="p">
+            The useParams hook can be used in the component to access the
+            parameter value. Dynamic routing makes it easy to create reusable
+            components that can handle different types of data.
+          </p>
+        </TextSection>
+        <AddingDynamicRouteExample />
+      </Slide>
+      <Slide vertical>
+        <h2 className="h2">Using Dynamic Route</h2>
+        <UsingDynamicRouteExample />
+      </Slide>
       <Slide>
         <TextSection>
           <h2 className="h2">Route Guarding</h2>

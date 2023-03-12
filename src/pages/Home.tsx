@@ -1,22 +1,28 @@
-import { AiOutlineGithub, AiOutlineGlobal } from "react-icons/ai";
+import { AiOutlineGithub } from "react-icons/ai";
 import { OverView } from "../Components/Overview";
 import { Slide } from "../Components/Slide";
-
+import {
+  TbArrowUp,
+  TbArrowUpLeft,
+  TbArrowWaveLeftDown,
+  TbArrowWaveLeftUp,
+  TbArrowWaveRightUp,
+} from "react-icons/tb";
+import { TransitionsSlide } from "../Components/TransitionsSlides";
+import { BsArrowDownUp, BsArrowsMove } from "react-icons/bs";
 export const Home = () => {
   return (
     <>
+      <TransitionsSlide title="React-CMP25" />
       <Slide>
-        <h1 className="display">React-CMP25</h1>
-      </Slide>
-      <Slide>
-        <div className="grid grid-cols-3 grid-rows-2 gap-4 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full">
           <OverView header="Introduction" path="/intro">
             Introduction React and client-side rendering and Document Object
             Model (DOM), create-react-app, Vite, and meta-frameworks such as
             Next. Additionally, gives an overview of the files included in an
             initial React project.
           </OverView>
-          <OverView header="JSX / Components" path="/stateprops">
+          <OverView header="JSX / Components" path="/jsxandcomponents">
             dump and stateful components, HOCs, Render Props, Lifecycle Methods,
             Fragments, useEffect, array methods, and event handling. By the end,
             you will have a solid understanding of the core concepts and tools
@@ -52,24 +58,17 @@ export const Home = () => {
         </div>
       </Slide>
       <Slide>
-        <div className="text-9xl text-white flex gap-8 text-center">
+        <div className="text-9xl text-white text-center flex flex-col items-center gap-8">
           <a
             href="https://github.com/Walid-Kh/react-presentation"
             target="_blank"
             rel="noopener noreferrer"
           >
             <AiOutlineGithub />
-            <p className="p text-base">Repository</p>
           </a>
-          <a
-            className="text-9xl"
-            href="http://"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <AiOutlineGlobal />
-            <p className="p text-base">Website</p>
-          </a>
+          <p className="p text-base whitespace-nowrap">
+            Check out the project github!
+          </p>
         </div>
       </Slide>
     </>

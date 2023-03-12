@@ -1,4 +1,4 @@
-import { CodeBlock } from "../Components/CodeBlock";
+import { CodeBlock } from "../../Components/CodeBlock";
 
 export const RoutingExample = () => {
   return (
@@ -90,7 +90,53 @@ const App = () => {
 export const AddingLinksExample = () => {
   return (
     <CodeBlock fileName="NavBar.tsx">
-      {`<Link to="/">\n\t<Btn>\n\t\tHome\n\t</Btn>\n</Link>`}
+      {`<Link to="/">
+  <Btn>
+    Home
+  </Btn>
+</Link>`}
+    </CodeBlock>
+  );
+};
+export const AddingDynamicRouteExample = () => {
+  return (
+    <CodeBlock fileName="Dynamic Routes">
+      {`import React from 'react';
+  import { Route, Routes } from 'react-router-dom';
+  import Home from './Home';
+  import BlogPost from './BlogPost';
+  
+  const App = () => {
+    return (
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/blog/:id" element={<BlogPost />} />
+        </Routes>
+      </Router>
+    );
+  };`}
+    </CodeBlock>
+  );
+};
+export const UsingDynamicRouteExample = () => {
+  return (
+    <CodeBlock full fileName="Using Dynamic Routes">
+      {`import React from 'react';
+  import { useParams } from 'react-router-dom';
+
+  const BlogPost = () => {
+    const { id } = useParams();
+
+    return (
+      <div>
+        <h2>Blog Post {id}</h2>
+        <p>This is the content of blog post {id}.</p>
+      </div>
+    );
+  };
+
+export default BlogPost;`}
     </CodeBlock>
   );
 };

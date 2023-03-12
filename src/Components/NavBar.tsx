@@ -16,7 +16,12 @@ export const NavBar = () => {
   return (
     <nav className="fixed left-full -translate-x-full z-20 hidden lg:block">
       <div className="flex flex-col justify-between items-center h-screen p-4">
-        <Btn onClick={() => slide("up")} rounded>
+        <Btn
+          Attributes={{
+            onClick: () => slide("up"),
+          }}
+          rounded
+        >
           <AiOutlineArrowUp />
         </Btn>
         <ul className="flex flex-col items-center gap-4">
@@ -26,16 +31,31 @@ export const NavBar = () => {
             </Btn>
           </Link>
           {darkMode ? (
-            <Btn rounded onClick={() => toggleDarkMode(false)}>
+            <Btn
+              rounded
+              Attributes={{
+                onClick: () => toggleDarkMode(false),
+              }}
+            >
               <BsSun />
             </Btn>
           ) : (
-            <Btn rounded onClick={() => toggleDarkMode(true)}>
+            <Btn
+              rounded
+              Attributes={{
+                onClick: () => toggleDarkMode(true),
+              }}
+            >
               <BsMoon />
             </Btn>
           )}
         </ul>
-        <Btn rounded onClick={() => slide("down")}>
+        <Btn
+          rounded
+          Attributes={{
+            onClick: () => slide("down"),
+          }}
+        >
           <AiOutlineArrowDown />
         </Btn>
       </div>

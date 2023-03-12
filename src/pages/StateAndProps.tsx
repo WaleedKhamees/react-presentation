@@ -2,33 +2,38 @@ import { CodeBlock } from "../Components/CodeBlock";
 import { Slide } from "../Components/Slide";
 import { TextSection } from "../Components/TextSection";
 import { TransitionsSlide } from "../Components/TransitionsSlides";
-import { UseMemo, UseMemoExample } from "../examples/UseMemo";
+import { UseMemo, UseMemoExample } from "../examples/StateAndProps/UseMemo";
 import {
   ComplexUseReducerCode,
   UseReducer,
   UseReducerCode,
-} from "../examples/UseReducer";
-import { UseState, UseStateCode } from "../examples/UseState";
+} from "../examples/StateAndProps/UseReducer";
+import { UseState, UseStateExample } from "../examples/StateAndProps/UseState";
 
 import MonkeyAction from "../assets/monkeyAction.gif";
 
-import { UseContextExample } from "../examples/UseContext";
+import { UseContextExample } from "../examples/StateAndProps/UseContext";
 import {
   DataFetching,
   DataFetchingAxios,
   DataFetchingFetch,
-} from "../examples/DataFetching";
-import { UseRefCodeExample, UseRefExample } from "../examples/UseRef";
+} from "../examples/StateAndProps/DataFetching";
+import {
+  UseRefCodeExample,
+  UseRefExample,
+} from "../examples/StateAndProps/UseRef";
 import {
   CreatingCustomHookExample,
   UsingCustomHookExample,
-} from "../examples/CreatingCustomHook";
+} from "../examples/StateAndProps/CreatingCustomHook";
+import { Group } from "../Components/Group";
+import { Img } from "../Components/Img";
 
 export const StateAndProps = () => {
   return (
     <>
       <TransitionsSlide title="State / Props">
-        <div className="flex items-center gap-4 dark:stroke-white stroke-black">
+        <Group className="dark:stroke-white stroke-black">
           <svg
             width="140"
             height="74"
@@ -57,7 +62,7 @@ export const StateAndProps = () => {
               strokeLinecap="round"
             />
           </svg>
-        </div>
+        </Group>
       </TransitionsSlide>
 
       {/* Intro */}
@@ -87,11 +92,11 @@ export const StateAndProps = () => {
             </li>
           </ul>
         </TextSection>
-        <img src={MonkeyAction} className="max-w-full" />
+        <Img src={MonkeyAction} />
       </Slide>
 
       {/* Props */}
-      <Slide reversed={true}>
+      <Slide reversed>
         <TextSection>
           <h2 className="h2">Props and Passing Them</h2>
           <p className="p">
@@ -129,14 +134,14 @@ const ParentComponent = () => {
             when the state is updated, changing the view of the user interface.
           </p>
         </TextSection>
-        <UseStateCode />
+        <UseStateExample />
       </Slide>
-      <Slide vertical={true}>
+      <Slide>
         <UseState />
       </Slide>
 
       {/* UseReducer */}
-      <Slide reversed={true}>
+      <Slide reversed>
         <TextSection>
           <h2 className="h2">useReducer</h2>
           <p className="p">
@@ -171,7 +176,7 @@ const ParentComponent = () => {
       </Slide>
 
       {/* UseMemo */}
-      <Slide>
+      <Slide reversed>
         <TextSection>
           <h2 className="h2">useMemo</h2>
           <p className="p">
@@ -192,7 +197,8 @@ const ParentComponent = () => {
         />
       </Slide>
 
-      <Slide reversed={true}>
+      {/* useCallback */}
+      <Slide>
         <TextSection>
           <h2 className="h2">useCallback</h2>
           <p className="p">
@@ -209,7 +215,8 @@ const ParentComponent = () => {
         </CodeBlock>
       </Slide>
 
-      <Slide>
+      {/* useContext */}
+      <Slide reversed>
         <TextSection>
           <h2 className="h2">useContext</h2>
           <p className="p">
@@ -328,8 +335,10 @@ const ParentComponent = () => {
       </Slide>
 
       <Slide>
-        <CreatingCustomHookExample />
-        <UsingCustomHookExample />
+        <Group>
+          <CreatingCustomHookExample />
+          <UsingCustomHookExample />
+        </Group>
       </Slide>
 
       {/* useRef hook */}
