@@ -158,6 +158,19 @@ const ParentComponent = () => {
         <UseReducer />
       </Slide>
       <Slide>
+        <TextSection>
+          <h2 className="h2">Shopping Cart</h2>
+          <p className="p">
+            When building a shopping cart in React, the useState hook can become
+            complex and difficult to maintain due to the many possible actions
+            that can modify the cart's state. In this scenario, the useReducer
+            hook is a better choice because it allows for more efficient and
+            less boilerplate code. With useReducer, a single reducer function
+            can handle all the different actions that modify the state of the
+            cart, and each action can be represented by an object with a type
+            property and additional data needed to perform the action.
+          </p>
+        </TextSection>
         <ComplexUseReducerCode />
       </Slide>
 

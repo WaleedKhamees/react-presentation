@@ -2,6 +2,7 @@ import { Slide } from "../Components/Slide";
 import { TextSection } from "../Components/TextSection";
 import { TransitionsSlide } from "../Components/TransitionsSlides";
 import {
+  AddingLinksExample,
   GuardComponentExample,
   RouteGuardingExample,
   RoutingExample,
@@ -55,9 +56,25 @@ export const Routing = () => {
             as rendering different components based on the current route or
             passing route parameters.
           </p>
+          <p className="p">
+            It works by changing the component shown on the screen with
+            component provided in the routes
+          </p>
         </TextSection>
         <RoutingExample />
       </Slide>
+
+      <Slide>
+        <TextSection>
+          <h2 className="h2">Adding Links</h2>
+          <p className="p">
+            Links can be added using built in <code>Link</code> component
+            
+          </p>
+        </TextSection>
+        <AddingLinksExample />
+      </Slide>
+
       <Slide>
         <TextSection>
           <h2 className="h2">Route Guarding</h2>

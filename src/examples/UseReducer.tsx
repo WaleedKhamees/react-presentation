@@ -33,7 +33,7 @@ export const UseReducerCode = () => (
 );
 export const ComplexUseReducerCode = () => {
   return (
-    <CodeBlock fileName="ShoppingCart useReducer" full>
+    <CodeBlock fileName="ShoppingCart useReducer">
       {`import { useReducer } from 'react';
 
 const cartReducer = (state, action) => {

@@ -86,3 +86,11 @@ const App = () => {
     </CodeBlock>
   );
 };
+
+export const AddingLinksExample = () => {
+  return (
+    <CodeBlock fileName="NavBar.tsx">
+      {`<Link to="/">\n\t<Btn>\n\t\tHome\n\t</Btn>\n</Link>`}
+    </CodeBlock>
+  );
+};
