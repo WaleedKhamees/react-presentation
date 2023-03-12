@@ -8,15 +8,15 @@ export const useFetch = (url) => {
   const [error, setError] = useState();
   const [isLoading, setIsLoading] = useState(false);
   const fetchData = useCallback(async () => {
-  setIsLoading(true);
-  try {
-    const response = await fetch(url);
-    const jsonData = await response.json();
-    setData(jsonData);
-    setIsLoading(false);
-  } 
-  catch (error) {
-    setError(error);
+    setIsLoading(true);
+    try {
+      const response = await fetch(url);
+      const jsonData = await response.json();
+      setData(jsonData);
+      setIsLoading(false);
+    } 
+    catch (error) {
+      setError(error);
     }
   }, [url]);
   useEffect(() => {

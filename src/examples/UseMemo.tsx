@@ -9,9 +9,8 @@ export const UseMemoExample = () => {
   const data = Array.from({ length: 40 }, () => Math.floor(Math.random() * 40));
 
   const processedData = useMemo(() => {
-    const result = data.map((item) => Math.round(Math.log(item ** number)));
-    return result;
-  }, [number, data]);
+    return data.sort((a, b) => a - b);
+  }, [data]);
 
   return (
     <div>

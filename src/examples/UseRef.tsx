@@ -45,6 +45,7 @@ export const UseRefExample = () => {
 
   return (
     <form className="flex flex-col gap-4 justify-center">
+      <h2 className="h2 text-center">useRef Example</h2>
       <input
         type="text"
         ref={inputRef}

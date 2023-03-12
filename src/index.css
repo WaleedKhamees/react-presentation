@@ -17,13 +17,13 @@
     @apply h-fit text-5xl font-bold tracking-[-0.005em] dark:text-white text-black;
   }
   .h1 {
-    @apply h-fit text-[1.8rem] leading-[2.125rem] font-bold tracking-[-0.005em] mb-[0.5em] dark:text-reactLightBlue text-black;
+    @apply h-fit text-[1.8rem] leading-[2.125rem] font-bold tracking-[-0.005em] mb-[0.5em] dark:text-white text-black;
   }
   .h2 {
-    @apply h-fit text-[1.5rem] leading-[1.875rem] font-semibold tracking-[0em] mb-[0.5em] dark:text-reactLightBlue text-black;
+    @apply h-fit text-[1.5rem] leading-[1.875rem] font-semibold tracking-[0em] mb-[0.5em] dark:text-white text-black;
   }
   .h3 {
-    @apply h-fit text-xl leading-[1.5rem] font-medium tracking-[0em] mb-[0.5em] dark:text-reactLightBlue text-black;
+    @apply h-fit text-xl leading-[1.5rem] font-medium tracking-[0em] mb-[0.5em] dark:text-white text-black;
   }
   .p {
     @apply h-fit leading-[24px] tracking-[0em] mb-[0.5em] dark:text-bodyDark text-bodyLight;
