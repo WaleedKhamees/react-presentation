@@ -58,7 +58,7 @@ export const Home = () => {
         </div>
       </Slide>
       <Slide>
-        <div className="text-9xl text-white text-center flex flex-col items-center gap-8">
+        <div className="text-9xl dark:text-white text-center flex flex-col items-center gap-8">
           <a
             href="https://github.com/Walid-Kh/react-presentation"
             target="_blank"
