@@ -4,6 +4,7 @@ interface BtnPropType extends HTMLAttributes<HTMLButtonElement> {
   children?: ReactNode | ReactNode[];
   rounded?: boolean | undefined;
   rectangle?: boolean | undefined;
+  square?: boolean | undefined;
 }
 
 export const Btn = ({
@@ -12,6 +13,7 @@ export const Btn = ({
   onClick,
   className,
   rectangle,
+  square,
 }: BtnPropType) => {
   return (
     <button
@@ -21,6 +23,7 @@ export const Btn = ({
       border-black border-opacity-10 dark:border-white dark:border-opacity-10      
       ${rounded ? "rounded-full aspect-square p-4" : ""} 
       ${rectangle ? "px-8 py-2 rounded-lg" : ""}  
+      ${square ? "p-2 rounded-lg" : ""}  
       ${className} 
       `}
     >
