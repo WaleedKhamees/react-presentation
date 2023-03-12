@@ -134,7 +134,7 @@ ReactDOM.render(<h1>Hello World!</h1>, document.getElementById("root"));
 
       <Slide vertical>
         <h2 className="display cursor-default">😂</h2>
-        <img loading="lazy" src="https://i.imgur.com/b6rDqi6.png" />
+        <Img src="https://i.imgur.com/b6rDqi6.png" />
       </Slide>
 
       {/* first component */}
