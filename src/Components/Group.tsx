@@ -10,7 +10,7 @@ export const Group: React.FC<GroupProps> = ({
 }) => {
   return (
     <div
-      className={`w-full flex flex-col 
+      className={`w-full flex flex-col relative
       items-center justify-center gap-8 md:gap-4
       ${vertical ? "md:flex-col" : "md:flex-row"}
       ${className}

@@ -1,10 +1,26 @@
 import { CodeBlock } from "../../Components/CodeBlock";
+import { DarkModeContext } from "../../App";
+import { useContext } from "react";
+import { FaGhost } from "react-icons/fa";
+import { Group } from "../../Components/Group";
+
+const Ghost = () => {
+  const { darkMode } = useContext(DarkModeContext);
+  if (darkMode)
+    return (
+      <>
+        <FaGhost className="text-white" size={24} />
+      </>
+    );
+  else return null;
+};
 
 export const UseContextExample = () => {
   return (
     <>
-      <CodeBlock fileName="App.tsx (Creating Context)">
-        {`const DarkModeContext = createContext({
+      <Group>
+        <CodeBlock fileName="App.tsx (Creating Context)">
+          {`const DarkModeContext = createContext({
   darkMode: false,
   toggleDarkMode: () => undefined,
 });
@@ -13,20 +29,8 @@ const App = () => {
   const [darkMode, setDarkMode] = useState(false);
 
   const toggleDarkMode = (dark) => {
-    setDarkMode(dark);
-    localStorage.setItem("theme", dark ? "dark" : "light");
-    if (dark) document.documentElement.classList.add("dark");
-    else document.documentElement.classList.remove("dark");
+    setDarkMode(!dark);
   };
-
-  useEffect(() => {
-    if (localStorage.getItem("theme") === "dark") toggleDarkMode(true);
-    else if (localStorage.getItem("theme") === "light") toggleDarkMode(false);
-    else {
-      localStorage.setItem("theme", "dark");
-      toggleDarkMode(true);
-    }
-  }, []);
 
   return (
     <div>
@@ -38,13 +42,21 @@ const App = () => {
   );
 };
 `}
-      </CodeBlock>
-      <CodeBlock fileName="StateAndProps.tsx (using Context)">
-        {`import { DarkModeContext } from "../App";
-import { useContext } from "react";
-...
-const { darkMode, toggleDarkMode } = useContext(DarkModeContext);`}
-      </CodeBlock>
+        </CodeBlock>
+        <CodeBlock fileName="StateAndProps.tsx (using Context)">
+          {`const Ghost = () => {
+  const { darkMode } = useContext(DarkModeContext);
+  if (darkMode)
+    return (
+      <>
+        <FaGhost className="text-white" size={24} />
+      </>
+    );
+  else return null;
+};`}
+        </CodeBlock>
+      </Group>
+      <Ghost />
     </>
   );
 };

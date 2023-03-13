@@ -235,7 +235,7 @@ const ParentComponent = () => {
         </TextSection>
       </Slide>
 
-      <Slide>
+      <Slide vertical>
         <UseContextExample />
       </Slide>
 
@@ -271,35 +271,6 @@ const ParentComponent = () => {
           </ul>
         </TextSection>
         <DataFetchingFetch />
-      </Slide>
-      <Slide reversed>
-        <TextSection>
-          <h2 className="h2">Axios</h2>
-          <h3 className="h3">Pros of using Axios</h3>
-          <ul className="ul">
-            <li>
-              Simple and consistent API for handling requests and responses
-            </li>
-            <li>
-              Provides a more convenient and powerful interface than the
-              built-in fetch API
-            </li>
-            <li>Automatically converts response data to JSON format</li>
-            <li>Supports cancellation of requests</li>
-            <li>
-              Supports sending data in different formats such as JSON and
-              FormData
-            </li>
-            <li>Good error handling capabilities</li>
-          </ul>
-          <h3 className="h3">Cons of Using Axios</h3>
-          <ul className="ul">
-            <li>Adds an extra dependency to the project.</li>
-            <li>Slightly larger bundle size than the built-in fetch API.</li>
-            <li>May be overkill for simple data fetching needs.</li>
-          </ul>
-        </TextSection>
-        <DataFetchingAxios />
       </Slide>
       <Slide>
         <DataFetching />

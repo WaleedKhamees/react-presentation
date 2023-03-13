@@ -11,7 +11,7 @@ export const UseRefCodeExample = () => {
 
   const handleClick = (e: FormEvent) => {
     e.preventDefault();
-    const inputValue = inputRef.current?.value as string;
+    const inputValue = inputRef.current?.value;
     setMessage("User Entered : " + inputValue);
   };
 

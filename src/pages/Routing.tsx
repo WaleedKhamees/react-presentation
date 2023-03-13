@@ -79,8 +79,7 @@ export const Routing = () => {
         <TextSection>
           <h2 className="h2">Dynamic Routing</h2>
           <p className="p">
-            Dynamic routing in React Router DOM v6 allows for passing URL
-            parameters to a component.
+            Dynamic routing allows for passing URL parameters to a component.
           </p>
           <p className="p">
             The parameter name is specified using the : prefix in the path of

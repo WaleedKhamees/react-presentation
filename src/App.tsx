@@ -37,7 +37,7 @@ const App = () => {
   }, []);
   return (
     <DarkModeContext.Provider value={{ darkMode, toggleDarkMode }}>
-      <div className="bg-white relative flex flex-col items-center gap-12 md:gap-0 dark:bg-reactDark3">
+      <main className="bg-white relative flex flex-col items-center gap-12 md:gap-0 dark:bg-reactDark3">
         <NavBar />
         <SlideToTopWrapper>
           <Routes>
@@ -48,7 +48,7 @@ const App = () => {
             <Route path="*" element={<NotFound />} />
           </Routes>
         </SlideToTopWrapper>
-      </div>
+      </main>
     </DarkModeContext.Provider>
   );
 };
