@@ -102,7 +102,8 @@ export const Routing = () => {
         <h2 className="h2">Using Dynamic Route</h2>
         <UsingDynamicRouteExample />
       </Slide>
-      <Slide>
+
+      {/* <Slide>
         <TextSection>
           <h2 className="h2">Route Guarding</h2>
           <p className="p">
@@ -134,7 +135,7 @@ export const Routing = () => {
       <Slide>
         <WrapperExample />
         <UsingWrapperExample />
-      </Slide>
+      </Slide> */}
     </>
   );
 };

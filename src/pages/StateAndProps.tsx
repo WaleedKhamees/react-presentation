@@ -32,7 +32,7 @@ import { Img } from "../Components/Img";
 export const StateAndProps = () => {
   return (
     <>
-      <TransitionsSlide title="State / Props">
+      <TransitionsSlide title="The State">
         <Group className="dark:stroke-white stroke-black">
           <svg
             width="140"
@@ -93,33 +93,6 @@ export const StateAndProps = () => {
           </ul>
         </TextSection>
         <Img src={MonkeyAction} />
-      </Slide>
-
-      {/* Props */}
-      <Slide reversed>
-        <TextSection>
-          <h2 className="h2">Props and Passing Them</h2>
-          <p className="p">
-            React props are used to pass data between components, allowing for
-            communication between parent and child components. They are
-            essentially a component's configuration and are passed as attributes
-            to a component. Props are read-only and provide a way to make
-            components reusable and customizable without rewriting code.
-          </p>
-        </TextSection>
-        <CodeBlock fileName="props Example">
-          {`const CustomButton = ({name}) => {
-  return <button>{name}</button>;
-}
-const ParentComponent = () => {
-  return (
-    <div>
-      <h1>Parent Component</h1>
-      <CustomButton name={name} />
-    </div>
-  );
-}`}
-        </CodeBlock>
       </Slide>
 
       {/* UseState */}

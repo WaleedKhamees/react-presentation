@@ -43,7 +43,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/jsxandcomponents" element={<JSXAndComponents />} />
-            <Route path="/stateprops" element={<StateAndProps />} />
+            <Route path="/state" element={<StateAndProps />} />
             <Route path="/routing" element={<Routing />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
