@@ -29,7 +29,7 @@ export const Home = () => {
             needed to create React App.
           </OverView>
           <OverView header="The State" path="/state">
-            The article covers state, props, and various hooks used for state
+            The article covers state and various hooks used for state
             management, performance optimization, context, and data fetching in
             React. Custom hooks are also discussed. Understanding these concepts
             is crucial for efficient React development.

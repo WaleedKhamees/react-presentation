@@ -155,7 +155,6 @@ function App() {
 export default App;
 `}</CodeBlock>
         </Group>
-        <Img src="https://i.imgur.com/yOPAyUf.png" />
       </Slide>
 
       {/* card */}
@@ -315,6 +314,7 @@ export default ProductPage;
 `}</CodeBlock>
         </Group>
       </Slide>
+
       <Slide vertical>
         <h2 className="h2">Result</h2>
         <Img src="https://i.imgur.com/xjh7LVb.png" />

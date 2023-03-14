@@ -43,8 +43,9 @@ const App = () => {
 };
 `}
         </CodeBlock>
-        <CodeBlock fileName="StateAndProps.tsx (using Context)">
-          {`const Ghost = () => {
+        <CodeBlock fileName="UseContext.tsx (using Context)">
+          {`import { DarkModeContext } from "../App";
+const Ghost = () => {
   const { darkMode } = useContext(DarkModeContext);
   if (darkMode)
     return (

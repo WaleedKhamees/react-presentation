@@ -95,6 +95,7 @@ export const StateAndProps = () => {
         <Img src={MonkeyAction} />
       </Slide>
 
+
       {/* UseState */}
       <Slide>
         <TextSection>
