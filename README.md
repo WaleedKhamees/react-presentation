@@ -24,11 +24,11 @@ React-Presentation is a web-based lecture platform that provides an interactive 
 ### Home Page
 ![React-Presentation Home Page](https://github.com/Walid-Kh/react-presentation/blob/main/Assets/Home.png)
 
-### Presentation Slides
-![React-Presentation Presentation Slides](https://example.com/react-presentation/Slide.png)
+### Presentation Slide
+![React-Presentation Presentation Slide Example](https://github.com/Walid-Kh/react-presentation/blob/main/Assets/Slide.png)
 
-### Code Examples
-![React-Presentation Code Examples](https://example.com/react-presentation/Code.png)
+### Code Example
+![React-Presentation Code Example](https://github.com/Walid-Kh/react-presentation/blob/main/Assets/Code.png)
 
 ## Getting Started
 
