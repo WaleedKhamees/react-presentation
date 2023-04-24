@@ -42,9 +42,9 @@ export const Home = () => {
             className="w-full outline-none rounded-lg aspect-video"
             src="https://www.youtube.com/embed/YyNt7doG7qQ"
             title="Week 5 (React &amp; React Native)"
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
+            allowFullScreen
           ></iframe>
         </div>
         <div className="text-4xl dark:text-white text-center flex flex-col items-center gap-2">
