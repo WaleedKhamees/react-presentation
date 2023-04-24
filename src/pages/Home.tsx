@@ -1,13 +1,6 @@
 import { AiOutlineGithub } from "react-icons/ai";
 import { OverView } from "../Components/Overview";
 import { Slide } from "../Components/Slide";
-import {
-  TbArrowUp,
-  TbArrowUpLeft,
-  TbArrowWaveLeftDown,
-  TbArrowWaveLeftUp,
-  TbArrowWaveRightUp,
-} from "react-icons/tb";
 import { TransitionsSlide } from "../Components/TransitionsSlides";
 import { BsArrowDownUp, BsArrowsMove } from "react-icons/bs";
 export const Home = () => {
@@ -34,31 +27,27 @@ export const Home = () => {
             React. Custom hooks are also discussed. Understanding these concepts
             is crucial for efficient React development.
           </OverView>
-          <OverView header="Routing" path="/routing">
+          <OverView className="md:col-span-3" header="Routing" path="/routing">
             React Router Dom is a library that enables routing in React
             applications. The library provides various components and hooks for
             building multi-page applications with client-side routing. The
             article covers the fundamental concepts of React Router Dom.
           </OverView>
-          <OverView header="React Native" path="/reactnative">
-            React Native is a JavaScript framework for building mobile
-            applications on iOS and Android devices. It uses a native rendering
-            engine to create components that look and behave like native mobile
-            components.
-          </OverView>
-          <OverView
-            header="Styling and Future Trends"
-            path="/stylingfuturetrends"
-          >
-            The article covers state, props, and various hooks used for state
-            management, performance optimization, context, and data fetching in
-            React. Custom hooks are also discussed. Understanding these concepts
-            is crucial for efficient React development.
-          </OverView>
         </div>
       </Slide>
-      <Slide>
-        <div className="text-9xl dark:text-white text-center flex flex-col items-center gap-8">
+      <Slide vertical>
+        <div className="w-full">
+          <h2 className="h2 text-center">The Actual Lecture! (Arabic)</h2>
+          <iframe
+            className="w-full outline-none rounded-lg aspect-video"
+            src="https://www.youtube.com/embed/YyNt7doG7qQ"
+            title="Week 5 (React &amp; React Native)"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div className="text-4xl dark:text-white text-center flex flex-col items-center gap-2">
           <a
             href="https://github.com/Walid-Kh/react-presentation"
             target="_blank"

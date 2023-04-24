@@ -8,6 +8,7 @@ import { Routing } from "./pages/Routing";
 import { SlideToTopWrapper } from "./util/SlideToTopWrapper";
 import { NotFound } from "./pages/NotFound";
 import { JSXAndComponents } from "./pages/JSXAndComponents";
+import { Intro } from "./pages/Intro";
 
 type DarkModeContextType = {
   darkMode: boolean;
@@ -42,6 +43,7 @@ const App = () => {
         <SlideToTopWrapper>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/intro" element={<Intro />} />
             <Route path="/jsxandcomponents" element={<JSXAndComponents />} />
             <Route path="/state" element={<StateAndProps />} />
             <Route path="/routing" element={<Routing />} />

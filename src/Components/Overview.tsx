@@ -6,13 +6,14 @@ interface OverView {
   path: string;
   header: string;
   children?: ReactNode | ReactNode[];
+  className?: string;
 }
-export const OverView = ({ children, header, path }: OverView) => {
+export const OverView = ({ children, header, path, className }: OverView) => {
   return (
     <div
-      className="rounded-lg p-4 border dark:border-white
+      className={`rounded-lg p-4 border dark:border-white
      border-black dark:border-opacity-10
-      border-opacity-10 flex flex-col justify-between"
+      border-opacity-10 flex flex-col justify-between ${className}`}
     >
       <h3 className="h3">{header}</h3>
       <p className="p">{children}</p>
