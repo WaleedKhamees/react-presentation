@@ -34,7 +34,7 @@ React-Presentation is a web-based lecture platform that provides an interactive 
 
 To get started with React-Presentation, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/username/react-presentation.git`
+1. Clone the repository: `git clone https://github.com/Walid-Kh/react-presentation`
 2. Install dependencies: `npm install`
 3. Start the development server: `npm run dev`
 4. Open your web browser and go to `http://localhost:3000` to access the presentation website
